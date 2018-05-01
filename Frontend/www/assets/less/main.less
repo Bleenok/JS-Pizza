@@ -1,3 +1,745 @@
-@mainColor: blue;
+@mainColor: #ec890e;
+@lmainColor: #ecab4c;
+@smallTextColor: #a3a0a0;
+@colorOfText: #333;
 
 @import "pizza/pizza-card";
+
+@RightPanelWidth: 330px;
+@TopHeight: 80px;
+@RightPanelBottomHeight: 100px;
+
+*{
+  font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.all-pizza-type-wrap {
+
+  margin-left: 25%;
+  margin-bottom: 3%;
+}
+.main, body{
+  min-width: 594px;
+}
+
+.header-top-row{
+  background: rgba(0,0,0,.0);
+  border-bottom: 1px solid #a1a1a1;
+  margin-top: 7px;
+  margin-bottom: 1px;
+}
+.main-header-top-items{
+  background: rgba(0,0,0,.0);
+}
+
+.label-danger {
+  position: absolute;
+  top: -1%;
+  right: -1%;
+  font-weight: 700;
+}
+
+.label-success {
+  position: absolute;
+  top: -1%;
+  right: -1%;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.top-panel {
+  background: rgba(0,0,0,.8);
+  z-index: 15;
+  padding-left: 130px;
+  padding-right: 350px;
+  border-radius: 0;
+  top: 0px;
+  position: fixed;
+  right: 0px;
+  left: 0px;
+  min-height: 50px;
+  margin-bottom: 15px;
+  border-width: 1px;
+  border-style: solid;
+  border-color: transparent;
+  border-image: initial;
+  height: auto;
+}
+
+.site-icon{
+  position: fixed;
+  top: 0;
+  background: #ea862e;
+  z-index: 99;
+  width: 100px;
+  height: 90px;
+  font-size: 19px;
+  padding: 10px;
+  padding-top: 15px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  left: 9px;
+  border-left: 1px solid @mainColor;
+  border-right: 1px solid @mainColor;
+}
+
+.discount-panel{
+  position: fixed;
+  bottom: -10px;
+  background: #ea862e;
+  z-index: 99;
+  width: 100px;
+  height: 120px;
+  padding: 10px;
+  padding-top: 15px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  left: 9px;
+  border-left: 1px solid @mainColor;
+  border-right: 1px solid @mainColor;
+  font-family: Helvetica,Calibri;
+  font-weight: 700;
+  font-size: 15px;
+  border-bottom: 2px dotted #d16301;
+  margin-bottom: 7px;
+  padding-bottom: 3px;
+  display:inline-block;
+}
+
+.pizza-logo div{
+  background: @mainColor;
+
+}
+
+.orange_label{
+  display: inline-block;
+  min-width: 10px;
+  padding: 3px 7px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: 10px;
+  background-color: @mainColor;
+  font-size: 14px;
+}
+
+.sign-in-button{
+  background: @mainColor;
+  background-image: linear-gradient(to bottom, #f0ad4e 0, @mainColor 100%);
+  text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+  box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
+  float: right;
+
+}
+
+.title{
+  color: @mainColor;
+  text-decoration: none;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.l1{  font-size: 19px;
+  color: white;
+}
+
+.l2{
+  font-size: 25px;
+  color: white;
+}
+
+.discount-title{
+  color: white;
+  border-bottom: 2px dotted #d16301;
+  padding-bottom: 5px;
+}
+.discount-text {
+  padding-top: 5px;
+  color: white;
+}
+
+.flag{
+  top: 90px;
+  transform: scaleY(-1);
+  width: 100px;
+  height: 11px;
+  left: -1px;
+  background-image: url(../images/discount.svg);
+  background-size: 100px 11px;
+  background-repeat: no-repeat;
+  padding: 0!important;
+  margin: 0!important;
+  position: absolute;
+}
+
+.discount-before{
+  bottom: 115px;
+  width: 100px;
+  height: 11px;
+  left: -1px;
+  background-image: url(../images/discount.svg);
+  background-size: 100px 11px;
+  background-repeat: no-repeat;
+  padding: 0!important;
+  margin: 0!important;
+  position: absolute;
+}
+
+.top-text-grey {
+  display:inline-block;
+  text-shadow: 0 -1px 0 rgba(0,0,0,.9);
+  color:  #a1a1a1;
+  background: none;
+}
+
+
+.telephone{
+  font-size: 20px;
+  padding-right: 30px;
+  padding-bottom: 10px;
+}
+
+
+@media  (max-width: 700px) {
+  .telephone {
+    width: 100%;
+    font-size: 14px;
+    padding: 0;
+  }
+}
+
+.time{
+  font-size: 12px;
+  padding-right: 30px;
+}
+
+@media  (min-width: 992px) {
+  .visible-md-inline-block {
+    display: inline-block;
+  }
+}
+
+.free-pizza{
+  font-size: 16px;
+  padding-right: 30px;
+}
+
+@media  (min-width: 1200px) {
+  .visible-lg-inline-block {
+    display: inline-block;
+  }
+}
+
+.pizza-page{
+  background: rgba(0,0,0,.0);
+}
+
+.header-down-row{
+  box-sizing: border-box;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.hidden-xs{
+  font-size: 16px;
+}
+
+a {
+  color: #ec890e;
+  text-decoration: none;
+}
+
+left_panel::before{
+  box-sizing: border-box;
+  content: " ";
+  display: table;
+}
+
+.container-fluid{
+  padding-top: 80px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.inner-container{
+  max-width: 1000px;
+  margin: auto;
+  padding: 10px;
+}
+
+
+.left_panel{
+  bottom: 0px;
+  top:0px;
+  margin: auto;
+  padding-left: 30px;
+  padding-right: @RightPanelWidth;
+  max-width: 1354px;
+  height: auto;
+  background: white;
+}
+
+.left_panel::after{
+  box-sizing: border-box;
+}
+
+.main-title{
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.h2{
+  font-size: 100px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+  display: block;
+  -webkit-margin-before: 0.83em;
+  -webkit-margin-after: 0.83em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+
+.li:hover {
+  background-color: @mainColor;
+}
+
+.nav-pills>li.active>a {
+  background-color: @mainColor;
+}
+.nav-pills>li.active>a:hover  {
+  background-color: @mainColor;
+}
+.nav-pills>li.active>a:visited {
+  background-color: @mainColor;
+}
+.buy-button-small{
+  background-color: @mainColor;
+
+  vertical-align: middle;
+}
+
+.buy-button-big{
+  background-color: @mainColor;
+
+  vertical-align: middle;
+}
+.pizza-card{
+  text-align: center;
+}
+
+.title-text{
+  box-sizing: border-box;
+  font-size: 30px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+}
+
+
+#googleMap{
+  width: 100%;
+  height: 500px;
+}
+.pizza-card .pizza-icon{
+  margin-right: auto;
+  margin-left: auto;
+  width: 100%;
+  max-width: 300px;
+}
+
+.thumbnail a>img, .thumbnail>img {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.row {
+  margin-right: -15px;
+  margin-left: -15px;
+  box-sizing: border-box;
+  display: table;
+}
+
+.order-page-panel{
+  width: 100%;
+  padding-top:70px;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.next-step-wrap{
+  float: right;
+  padding-top:70px;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+.order-page-panel .next-step-wrap .next-step-width {
+  width: 110px;
+
+}
+.next-step-wrap{
+  padding-top:0px;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.bs-callout {
+  padding: 20px;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+  background-color: #fff;
+}
+
+.bs-callout-warning {
+  border-left-color: #ec890e!important;
+}
+
+.btn-block {
+  display: block;
+  width: 100%;
+}
+.row div{
+  display: block;
+}
+
+.pizza-label-new, .pizza-label-popular{
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  font-size: 24px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit;
+  display: block;
+  -webkit-margin-before: 1em;
+  -webkit-margin-after: 1em;
+  -webkit-margin-start: 0px;
+  -webkit-margin-end: 0px;
+}
+
+
+
+.label{
+  display: inline;
+  padding: .2em .6em .3em;
+  font-size: 125%;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25em;
+}
+
+.part-of-pizza{
+  position: absolute;
+  right: -48px;
+  top: 90px;
+  border-radius: 50% 0 0 50%;
+  max-height: 96px;
+  max-width: 96px;
+  z-index: 900;
+  vertical-align: middle;
+  border: 0;
+
+}
+
+.right_panel {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding-top: 35px;
+  margin-left: 20px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical; /*определяет ориентацию элемента внутри тянущегося бокса. vertical — элемент выводит свой контент по-вертикали*/
+  -webkit-box-direction: normal;/*определяет направление в котором выводятся дочерние элементы элемента в тянущемся боксе. normal — дочерние элементы выводятся в направлении по-умолчанию*/
+  -ms-flex-direction: column;
+  flex-direction: column;/*войство , указывающее на то,как flex-элементы распологаются во flex-контейнере по главной оси и направлению (normal или reversed).*/
+  min-width: 330px;
+  width: @RightPanelWidth;
+  /*background-color: green;*/
+  box-shadow: rgba(0,0,0,.2) -3px 3px 10px;/*тень*/
+  z-index: 1000;
+
+  .top-part{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 17px;
+    padding-top: 30px;
+    padding-left: 15px;
+    box-sizing: border-box;
+    position: absolute;
+    width: 100%;
+    height: @TopHeight;
+    top:0;
+    right: 0;
+    background: white;
+    z-index: 1010;
+
+    .text_order{
+      color: @colorOfText;
+      font-size: 20px;
+    }
+    .clean{
+      float: right;
+      margin-top: 5px;
+      cursor: pointer;
+      padding-right: 15px;
+      font-size: 10px;
+      line-height: 11px;
+      font-weight: 400;
+      color: @smallTextColor;
+    }
+  }
+  .main-part{
+    -webkit-box-flex: 1; /*задает возможность элемента растягиваться на пустое пространство родительского блока. <число> — элемент растягивается пропорционально свободному месту*/
+    height: 100%;
+    width: 100% ;
+    margin: 0px;
+    margin-top: 45px;
+    background-color: #F5F5F5;
+    box-sizing: border-box;
+    overflow-x: hidden;/*управляет отображением содержания блочного элемента по горизонтали, если контент целиком не помещается и выходит за область справа или слева от блока.*/
+    /*зайве ховається*/
+    overflow-y: scroll; /*полоса прокрутки*/
+    display: block;
+    z-index: 1000;
+    padding-bottom: @RightPanelBottomHeight+50px;
+
+    .bottom-part{
+      height: @RightPanelBottomHeight;
+    }
+
+    .order{
+      height: auto;
+
+      padding: 20px 61px 10px 24px;
+      border-bottom: 1px solid rgba(0,0,0,.1);
+      position: relative;
+      overflow: hidden;
+      background: #F5F5F5;
+
+      .order-size{
+        margin-top: 6px;
+        margin-bottom: 8px;
+
+        span {
+          font-size: 12px;
+        }
+        img {
+          font-size: 12px;
+        }
+      }
+      .price-box{
+        span {
+          color: #333333;
+          font-size: 14px;
+          font-weight: 700;
+        }
+      }
+
+      .weight-img{
+        margin-left: 15px;
+      }
+      .price{
+        margin-right: 10px;
+      }
+      .btn {
+        display: inline-block;
+        margin-bottom: 0;
+        font-weight: 400;
+        white-space: nowrap;
+        vertical-align: middle;
+        -ms-touch-action: manipulation;
+        touch-action: manipulation;
+        cursor: pointer;
+        user-select: none;
+        border: 1px solid transparent;
+        background: none;
+
+      }
+
+
+
+      .glyphicon{
+        width: 30px;
+        height: 30px;
+        padding: 6px 0;
+        font-size: 12px;
+        line-height: 1.428571429;
+        border-radius: 15px;
+        text-align: center;
+        text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+        box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
+      }
+      div{
+        background: #F5F5F5;
+
+        span{
+          background: #F5F5F5;
+        }
+
+        img{
+          background: #F5F5F5;
+        }
+      }
+      .pizza-icon{
+        position: absolute;
+        right: -48px;
+        top: 15px;
+        border-radius: 50% 0 0 50%;
+        max-height: 96px;
+        max-width: 96px;
+      }
+    }
+
+    .order-title{
+      line-height: 16px;
+      font-size: 20px;
+      color: #ec890e;
+    }
+    .glyphicon-minus{
+      background-image: linear-gradient(to bottom,#d9534f 0,#c12e2a 100%);
+      background-repeat: repeat-x;
+      border-color: #b92c28;
+
+    }
+    .glyphicon-plus{
+      background-image: linear-gradient(rgb(92, 184, 92) 0px, rgb(65, 150, 65) 100%);
+      background-repeat: repeat-x;
+      border-color: rgb(62, 143, 62);
+    }
+    .glyphicon-remove{
+      width: 25px;
+      color: @mainColor;
+      text-shadow: rgb(255, 255, 255) 0px 1px 0px;
+      background-image: linear-gradient(rgb(255, 255, 255) 0px, rgb(224, 224, 224) 100%);
+      background-repeat: repeat-x;
+      border-color: rgb(204, 204, 204);
+    }
+  }
+
+
+  .empty {
+    position: fixed;
+    top: 120px;
+    right: 70px;
+    font-size: 16px;
+  }
+
+  .e2{
+    top: 140px;
+    right: 110px;
+  }
+  .order-pizza-count{
+    padding-right: 3px;
+    padding-left: 3px;
+  }
+  .bottom-part{
+    font-weight: 700;
+    line-height: 17px;
+    position: absolute;
+    width: 100%;
+    height: @RightPanelBottomHeight;
+    bottom:0;
+    right: 0;
+    width: 100%;
+    box-sizing: border-box;
+
+    display: block;
+    padding: 10px;
+    border-top: 1px solid rgba(0,0,0,.1);
+    background-color: white;
+    background: white;
+    z-index: 1010;
+
+
+    #text_sum{
+      width:80%;
+    }
+
+    .correct{
+      font-size: 14px;
+    }
+
+    #text_sum, #count{
+      font-weight: 700;
+      font-size: 15px;
+      margin-bottom: 15px;
+      font-size: 15px;
+
+    }
+
+    #count{
+      position: absolute;
+      right: 0px;
+      font-weight: 700;
+      font-size: 24px;
+      margin-bottom: 15px;
+      padding-right: 30px;
+
+
+    }
+    .do_order_button{
+      position: absolute;
+      bottom: 10px;
+      right: 40px;
+      left: 10px;
+      height: 47px;
+
+    }
+
+    .p{
+      margin: 0 0 10px;
+      display: block;
+      -webkit-margin-before: 1em;
+      -webkit-margin-after: 1em;
+      -webkit-margin-start: 0px;
+      -webkit-margin-end: 0px;
+    }
+
+    .order-title{
+      line-height: 16px;
+      font-size: 20px;
+      color: @mainColor;
+
+    }
+
+    .button{
+      text-shadow: 0 -1px 0 rgba(0,0,0,.2);
+      box-shadow: inset 0 1px 0 rgba(255,255,255,.15), 0 1px 1px rgba(0,0,0,.075);
+      color: #fff;
+      width: 80%;
+      padding: 10px 16px;
+      font-size: 18px;
+      border-radius: 8px;
+      background-image: linear-gradient(to bottom, #f0ad4e 0, @mainColor 100%);
+      outline: none;
+    }
+
+    .correct{
+      font-size: 14px;
+    }
+  }
+}
