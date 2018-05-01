@@ -5,9 +5,24 @@
 
 @import "pizza/pizza-card";
 
-@RightPanelWidth: 330px;
-@TopHeight: 80px;
-@RightPanelBottomHeight: 100px;
+.pizza-page{
+  background: rgba(0,0,0,.0);
+}
+
+.header-down-row{
+  box-sizing: border-box;
+  padding-top: 5px;
+  padding-bottom: 15px;
+}
+
+.hidden-xs{
+  font-size: 16px;
+}
+
+a {
+  color: #ec890e;
+  text-decoration: none;
+}
 
 *{
   font-family: Lato, "Helvetica Neue", Arial, Helvetica, sans-serif;
@@ -34,21 +49,6 @@
   background: rgba(0,0,0,.0);
 }
 
-.label-danger {
-  position: absolute;
-  top: -1%;
-  right: -1%;
-  font-weight: 700;
-}
-
-.label-success {
-  position: absolute;
-  top: -1%;
-  right: -1%;
-  font-size: 18px;
-  font-weight: 700;
-}
-
 .top-panel {
   background: rgba(0,0,0,.8);
   z-index: 15;
@@ -66,6 +66,22 @@
   border-color: transparent;
   border-image: initial;
   height: auto;
+}
+
+.label-success {
+  position: absolute;
+  top: -1%;
+  right: -1%;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+
+.label-danger {
+  position: absolute;
+  top: -1%;
+  right: -1%;
+  font-weight: 700;
 }
 
 .site-icon{
@@ -145,11 +161,11 @@
   font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
 }
 
-.l1{  font-size: 19px;
+.logo1{  font-size: 19px;
   color: white;
 }
 
-.l2{
+.logo2{
   font-size: 25px;
   color: white;
 }
@@ -236,24 +252,7 @@
   }
 }
 
-.pizza-page{
-  background: rgba(0,0,0,.0);
-}
 
-.header-down-row{
-  box-sizing: border-box;
-  padding-top: 5px;
-  padding-bottom: 15px;
-}
-
-.hidden-xs{
-  font-size: 16px;
-}
-
-a {
-  color: #ec890e;
-  text-decoration: none;
-}
 
 left_panel::before{
   box-sizing: border-box;
@@ -281,7 +280,7 @@ left_panel::before{
   top:0px;
   margin: auto;
   padding-left: 30px;
-  padding-right: @RightPanelWidth;
+  padding-right: 330px;;
   max-width: 1354px;
   height: auto;
   background: white;
@@ -477,7 +476,7 @@ left_panel::before{
   -ms-flex-direction: column;
   flex-direction: column;/*войство , указывающее на то,как flex-элементы распологаются во flex-контейнере по главной оси и направлению (normal или reversed).*/
   min-width: 330px;
-  width: @RightPanelWidth;
+  width: 330px;;
   /*background-color: green;*/
   box-shadow: rgba(0,0,0,.2) -3px 3px 10px;/*тень*/
   z-index: 1000;
@@ -491,7 +490,7 @@ left_panel::before{
     box-sizing: border-box;
     position: absolute;
     width: 100%;
-    height: @TopHeight;
+    height: 80px;
     top:0;
     right: 0;
     background: white;
@@ -525,10 +524,10 @@ left_panel::before{
     overflow-y: scroll; /*полоса прокрутки*/
     display: block;
     z-index: 1000;
-    padding-bottom: @RightPanelBottomHeight+50px;
+    padding-bottom: 150px;
 
     .bottom-part{
-      height: @RightPanelBottomHeight;
+      height: 100px;
     }
 
     .order{
@@ -661,7 +660,7 @@ left_panel::before{
     line-height: 17px;
     position: absolute;
     width: 100%;
-    height: @RightPanelBottomHeight;
+    height: 100px;
     bottom:0;
     right: 0;
     width: 100%;
